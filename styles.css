@@ -1,0 +1,128 @@
+/* resets */
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* base styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #999;
+}
+
+/* top and bottom margins */
+p {
+  margin: 0.5em, 0, 0.5em, 0;
+}
+
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #a493c0;
+  padding: 10px;
+}
+
+nav a:visited,
+nav a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav > ul {
+  display: inline; /* layout bar horizontally */
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block; /* stack but customize width */
+  list-style: none;
+  margin: 0 5px 0 5px;
+}
+
+main {
+  background-image: url("images/background.png");
+  /* Allow header and footer to clear the body */
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 85%;
+}
+
+footer {
+  padding: 15px; /* I have no idea why he keeps mixing pixels and ems */
+}
+
+aside,
+article {
+  padding: 2em;
+}
+
+aside {
+  text-align: center; /* it aligns content, not just text */
+}
+
+article {
+  width: 75%;
+}
+
+.columns {
+  display: flex;
+}
+
+/* for medium to large screens */
+@media only screen and (min-width: 768px) {
+  main {
+    display: flex;
+  }
+  aside {
+    margin: left;
+  }
+  /* flex for desktop leaves a little more space for some reason */
+  .columns-desktop {
+    display: flex;
+  }
+}
+
+/* pie widget */
+.pie {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+}
+
+.pie img {
+  width: 100%;
+}
+
+.pie .title {
+  font-weight: bold;
+}
+
+/* Now you can fiddle with alignments without screwing the layout */
+.pie .columns {
+  width: 100%;
+}
+
+.pie .price {
+  text-align: right;
+}
+/* Makes the name and price lay out in a row (wtf, why not use inline elements then!?) */
+.pie .columns div {
+  width: 50%;
+}
+
+.pie button {
+  background-color: #f6aeae;
+  padding: 10px;
+  border: solid 1px #f6aeae;
+  border-radius: 3px;
+  color: #fff;
+}
