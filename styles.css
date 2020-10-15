@@ -71,6 +71,10 @@ article {
   width: 75%;
 }
 
+.columns {
+  display: flex;
+}
+
 /* for medium to large screens */
 @media only screen and (min-width: 768px) {
   main {
@@ -79,4 +83,12 @@ article {
   aside {
     margin: left;
   }
+  /* flex for desktop leaves a little more space for some reason */
+  .columns-desktop {
+    display: flex;
+  }
+}
+
+/* pie widget */
+.pie {
 }
