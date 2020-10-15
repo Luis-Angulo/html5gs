@@ -47,9 +47,36 @@ nav > ul > li {
 }
 
 main {
-    background-image: url("images/background.png");
-    /* Allow header and footer to clear the body */
-    padding-top: 3em;
-    padding-bottom: 3em;
-    min-height: 85%;
+  background-image: url("images/background.png");
+  /* Allow header and footer to clear the body */
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 85%;
+}
+
+footer {
+  padding: 15px; /* I have no idea why he keeps mixing pixels and ems */
+}
+
+aside,
+article {
+  padding: 2em;
+}
+
+aside {
+  text-align: center; /* it aligns content, not just text */
+}
+
+article {
+  width: 75%;
+}
+
+/* for medium to large screens */
+@media only screen and (min-width: 768px) {
+  main {
+    display: flex;
+  }
+  aside {
+    margin: left;
+  }
 }
